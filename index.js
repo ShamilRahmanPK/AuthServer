@@ -4,6 +4,7 @@ const cors = require('cors')
 const router = require('./routes/router')
 require('./config/connection')
 
+// JWTPASSWORD = shamil123
 
 const authServer = express()
 
