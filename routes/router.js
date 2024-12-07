@@ -1,5 +1,6 @@
 const express = require('express')
 const userController = require('../controller/userController')
+const authenticate = require('../middleware/authentication')
 
 const router = new express.Router()
 
@@ -12,6 +13,6 @@ router.post('/login',userController.loginController)
 
 // alluser
 
-router.get('/all-users',userController.allUsers)
+router.get('/all-users',authenticate,userController.allUsers)
 
 module.exports = router
